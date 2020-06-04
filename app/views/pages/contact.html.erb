@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beautify NY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Style all font awesome icons */
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 1;
+  }
+
+  /* Set a specific color for each brand */
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+
+
+  </style>
+
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<%= render 'layouts/navigation' %>
+
+  </head>
+<div class="container-fluid text-center bg-light">
+
+  <div class="row py-3 justify-content-center">
+     <div class="col-md">
+  <hr class="my-4">
+  <h1 class="font-weight-bold text-center text-info">
+CONTACT US
+</h1>
+<hr class="my-4">
+
+<!-- social media links -->
+
+<div class="col-md text-center">
+  <h6 class="text-info">Follow NYS Parks</h6>
+   <p> <a href="https://www.facebook.com/nystateparks/" style="text-decoration: none" class="fa fa-facebook" target="blank"></a>
+     <a href="http://www.instagram.com/nystateparks" style="text-decoration: none" class="fa fa-instagram" target="blank"></a>
+    <a href="https://twitter.com/NYStateParks?ref_src=twsrc%5Etfw" style="text-decoration: none" class="fa fa-twitter twitter-follow-button" target="blank"></a>
+</div>
+
+<!-- email form -->
+
+<br><br><h4 class="text-info"><u>Email Us!</u></h4>
+<form action=”mailto:contact@yourdomain.com”
+
+method=”POST”
+
+enctype=”multipart/form-data”
+
+name=”EmailTestForm”>
+
+<label for="fname">Name:</label>
+<br> <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+ <br><br><label for="reason">What would you like to know more about?</label>
+ <br><select id="reason" name="reason">
+   <option value="volunteer">Volunteering</option>
+   <option value="donate">Pollinator Education</option>
+   <option value="nysparks">NYS Parks</option>
+   <option value="other">Other</option>
+ </select>
+
+ <br><br><label for="subject">Questions/Comments:</label>
+ <br><textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;width:400px;"></textarea>
+
+<p> <input type="submit" value="Submit">
+
+</form>

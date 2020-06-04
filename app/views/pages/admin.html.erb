@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beautify NY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<%= render 'layouts/navigation' %>
+
+  </head>
+<div class="container-fluid">
+  <div class="container ml-5 mb-5 mt-3">
+    <h1 class="text-info mb-3">All Volunteers</h1>
+
+  <table class="table">
+    <thead>
+      <tr class="table-success">
+        <th scope="col"><center>Volunteer Name</center></th>
+        <th scope="col"><center>Park Location</center></th>
+        <th scope="col"><center>Date</center></th>
+        <th scope="col"><center>Hours</center></th>
+        <th scope="col"><center>Professional</center></th>
+        <th scope="col"><center>Notes</center></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @volunteers.each do |volunteer| %>
+        <tr>
+          <td scope="row"><center><%= volunteer.full_name %></center></td>
+          <td scope="row"><center><%= volunteer.park.name %></center></td>
+          <td scope="row"><center><%= volunteer.days %></center></td>
+          <td scope="row"><center><%= volunteer.hours %></center></td>
+          <td scope="row"><center><%= human_boolean(volunteer.professional) %></center></td>
+          <td scope="row"><center><%= volunteer.notes %></center></td>
+          <td><%= link_to 'Show', volunteer %></td>
+      <td><%= link_to 'Edit', edit_volunteer_path(volunteer) %></td>
+      <td><%= link_to 'Destroy', volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>

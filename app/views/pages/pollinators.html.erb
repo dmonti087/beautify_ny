@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .img-max {
+        max-width: 500px;
+        width:100%;
+      }
+      </style>
+    <title>Beautify NY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<%= render 'layouts/navigation' %>
+
+  </head>
+<div class="container-fluid text-center bg-light">
+
+  <div class="row py-3 justify-content-center">
+     <div class="col-md-8">
+  <hr class="my-4">
+  <h1 class="font-weight-bold text-center text-info">
+MEET THE POLLINATORS
+</h1>
+<hr class="my-4">
+<h6>Birds, bats, bees, butterflies, beetles, and other small mammals that pollinate plants are responsible for
+  bringing us one out of every three bites of food. They also sustain our ecosystems and produce our natural
+  resources by helping plants reproduce. Pollinating animals travel from plant to plant carrying pollen on their
+  bodies in a vital interaction that allows the transfer of genetic material critical to the reproductive system
+  of most flowering plants – the very plants that bring us food, prevent soil erosion and
+  increase carbon sequestration. Learn about these important pollinators below!
+</div>
+</div>
+
+  <!-- images -->
+<p>  <div class="row mt-4">
+  <!-- butterfly -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card mb-3">
+      <div class="img-max">
+    <img src="/butterfly.PNG" class="card-img-top" alt="Butterfly">
+    </div>
+    <div class="card-body">
+      <p class="card-text"></div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-success">Butterflies are found on every continent but Antarctica; the U.S.
+          is home to about 700 different species.</li>
+  <li class="list-group-item">Butterflies are diurnal, pollinating a wide variety of flowers that open during the day. </li>
+  <li class="list-group-item list-group-item-success"> They can see red, their favorite color, while bees cannot.</li>
+</ul>
+<div class="card-body">
+<%= link_to "Learn More", "http://pollinator.org", target:"_blank", class:"card-link" %>
+</div>
+  </div>
+  </div>
+
+  <!-- bee -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card mb-3">
+        <div class="img-max">
+    <img src="/bee.PNG" class="card-img-top" alt="Bee">
+    </div>
+    <div class="card-body">
+      <p class="card-text"></div>
+    <ul class="list-group list-group-flush">
+  <li class="list-group-item list-group-item-success">There are 4000 bee species in the U.S. There are 450 species New York State.</li>
+  <li class="list-group-item">Globally, 81 million hives produce 1.6 million tonnes of honey, around a third of
+    which is traded across national borders.</li>
+  <li class="list-group-item list-group-item-success">Some crops, including blueberries and cherries, are 90 percent
+    dependent on honey bee pollination.</li>
+</ul>
+<div class="card-body">
+<%= link_to "Learn More", "http://pollinator.org", target:"_blank", class:"card-link" %>
+</div>
+</div>
+  </div>
+
+  <!-- hummingbird -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card mb-3">
+        <div class="img-max">
+    <img src="/hummingbird.PNG" class="card-img-top" alt="Hummingbird">
+    </div>
+    <div class="card-body">
+      <p class="card-text"></div>
+    <ul class="list-group list-group-flush">
+  <li class="list-group-item list-group-item-success">There are more than 300 species of hummingbirds in the world,
+    all of which are found only in the western hemisphere.</li>
+  <li class="list-group-item">Hummingbirds lap up nectar with their tongues rather than use their beak as a straw</li>
+  <li class="list-group-item list-group-item-success">They feed on nectar, eat insects and obtain tree sap from sap wells</li>
+</ul>
+<div class="card-body">
+<%= link_to "Learn More", "http://pollinator.org", target:"_blank", class:"card-link" %>
+</div>
+</div>
+  </div>
+
+  <!-- bat -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card mb-3">
+        <div class="img-max">
+    <img src="/bat.PNG" class="card-img-top" alt="Bat">
+    </div>
+    <div class="card-body">
+      <p class="card-text"></div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item list-group-item-success">Flowers produce a musty, rotten odor to attract bats</li>
+      <li class="list-group-item">Some bats use echolocation to find flowers</li>
+      <li class="list-group-item list-group-item-success">Bats service many plants that we use for medicinal, cultural and economic purposes</li>
+    </ul>
+    <div class="card-body">
+<%= link_to "Learn More", "http://pollinator.org", target:"_blank", class:"card-link" %>
+</div>
+  </div>
+</div>
+</div><!-- /images -->

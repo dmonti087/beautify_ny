@@ -1,0 +1,67 @@
+
+
+<%= form_for(volunteer) do |f| %>
+  <% if volunteer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(volunteer.errors.count, "error") %> prohibited this volunteer form from being saved:</h2>
+
+      <ul>
+      <% volunteer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<b>
+  <div class="field">
+    <%= f.label :first_name, 'First Name:' %><br>
+    <%= f.text_field :first_name, required:true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name, 'Last Name:' %><br>
+    <%= f.text_field :last_name, required:true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, 'Email:' %><br>
+    <%= f.text_field :email, required:true %>
+  </div>
+
+<br><div class="field">
+<%= f.label :park_id, 'NYS Park Location:'%><br>
+  <%= f.collection_select :park_id, Park.all, :id, :name, {include_blank: true}, required:true %>
+</div>
+
+<br>
+<div class="field">
+  <%= f.label :days, 'Choose a Day:' %>
+  <%= f.select :days, Volunteer.days, {include_blank: true}, required:true %>
+</div>
+
+<br>
+  <div class="field">
+    <%= f.label :hours, 'Hours Available:' %>
+    <%= f.text_field :hours, :size=>"5" %>
+  </div>
+<br>
+
+<div class="field">
+   <%= f.check_box :professional, class: "checkbox-label"  %>
+     <%= f.label :professional, 'Professional/Technical Experience' %><br>
+ </div>
+
+
+
+<br>
+<div class="field">
+  <%= f.label :notes, 'Any additional notes you would like to share?:' %><br>
+  <%= f.text_area :notes, :rows=>5, :cols=>40 %>
+</div>
+
+<br>
+<div class="actions">
+  <%= f.submit 'Submit Volunteer Form'%>
+</div>
+</b>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  park_choice: MyString
+  hours: 1
+  professional: false
+  notes: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  park_choice: MyString
+  hours: 1
+  professional: false
+  notes: MyText

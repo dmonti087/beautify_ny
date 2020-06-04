@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beautify NY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<%= render 'layouts/navigation' %>
+
+  </head>
+<body>
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+</div>
+
+<div class="container ml-5 mb-5">
+  <h5 class="text-info">Completed Volunteer Form</h5>
+
+<p>
+  <strong>Volunteer Name:</strong>
+  <%= @volunteer.full_name %>
+</p>
+
+<p>
+  <strong>Volunteer Name:</strong>
+  <%= @volunteer.email %>
+</p>
+
+<p><strong>Park Location:</strong>
+<%= @volunteer.park.name %>
+
+<p>
+  <strong>Day Available:</strong>
+  <%= @volunteer.days %>
+</p>
+
+<p>
+  <strong>Hours Available:</strong>
+  <%= @volunteer.hours %>
+</p>
+
+
+<p>
+  <strong>Professional:</strong>
+  <%= human_boolean(@volunteer.professional) %>
+</p>
+
+<p>
+  <strong>Additional Notes:</strong>
+  <%= @volunteer.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+<%= link_to 'Back to Volunteer Main', volunteers_path %> | <%= link_to 'Admin View', admin_path %>
+
+
+<br>

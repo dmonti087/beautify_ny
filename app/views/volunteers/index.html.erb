@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beautify NY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<%= render 'layouts/navigation' %>
+
+  </head>
+<body>
+  <div class="row py-3 justify-content-center">
+     <div class="col-md-8">
+  <hr class="my-4">
+  <h1 class="display-4 font-weight-bold text-center text-info">
+VOLUNTEER
+</h1>
+<hr class="my-4">
+<h6>In order to accomplish our goal of building pollinator gardens at <%= link_to 'four different NYS Parks', nysparks_path %>
+all across the NYS region, we will need <b>A LOT</b> of help! We will be meeting every weekend of June from 8AM to 8PM.
+Snacks and beverages will be provided. Young or old, professional or not, have your own tools or don't..it doesn't matter.
+As long as you're willing to get a little dirty, we (& the pollinators) need <b>YOU!</b>
+
+<p class="text-center mt-3"><%= link_to('Help Us Out, Volunteer Now!', new_volunteer_path, :class => 'btn btn-large btn-primary')  %>
+
+  <blockquote class="blockquote text-center">
+    <p class="mb-0">"It is our collective and individual responsibility...<p>
+      to preserve and tend to the world in which we all live."</p>
+    <footer class="blockquote-footer"> <cite title="Source Title">Dalai Lama</cite></footer>
+  </blockquote>
+
+
+  <hr class="my-4">
+  <h3 class="display-5 font-weight-bold text-center text-info">
+Check Out All Our Awesome Volunteers!
+</h3>
+<hr class="my-4">
+
+<table class="table table-striped table-sm table-bordered">
+  <thead>
+    <tr class="table-success">
+      <th scope="col"><center>Volunteer Name</center></th>
+      <th scope="col"><center>Park Location</center></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @volunteers.each do |volunteer| %>
+      <tr>
+        <td scope="row"><center><%= volunteer.first_name %></center></td>
+        <td scope="row"><center><%= volunteer.park.name %></center></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
