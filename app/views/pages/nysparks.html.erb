@@ -56,6 +56,37 @@ integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7
     </div>
     <div class="card-body">
     <a href="https://parks.ny.gov/parks/bearmountain/details.aspx" target="blank" class="card-link">Learn More</a>
+<!-- collapsible  -->
+    <div class="pt-3"><p>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#bearmountain" aria-expanded="false" aria-controls="collapseExample">
+Volunteer List
+</button>
+</p>
+<div class="collapse" id="bearmountain">
+<div class="card card-body">
+<!-- table -->
+          <table class="table table-striped table-sm table-bordered">
+            <thead>
+              <tr class="table-info">
+                <th scope="col"><center>Bear Mountain Volunteers</center></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @vol_bearmountain.each do |volunteer| %>
+                <tr>
+                  <td scope="row"><center><%= volunteer.first_name %></center></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+<!-- /table -->
+
+</div>
+</div>
+</div>
+<!-- /collapsible  -->
     </div>
   </div>
   </div>
@@ -76,9 +107,38 @@ dog parks, kayacking, golf, public lawns and much more..all with a stunning view
   </div>
   <div class="card-body">
   <a href="https://hudsonriverpark.org/" target="blank" class="card-link">Learn More</a>
+  <div class="pt-3"><p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#hudson" aria-expanded="false" aria-controls="collapseExample">
+  Volunteer List
+  </button>
+  </p>
+  <div class="collapse" id="hudson">
+  <div class="card card-body">
+  <!-- table -->
+    <table class="table table-striped table-sm table-bordered">
+      <thead>
+        <tr class="table-info">
+          <th scope="col"><center>Hudson Park Volunteers</center></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @vol_hudson.each do |volunteer| %>
+          <tr>
+            <td scope="row"><center><%= volunteer.first_name %></center></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  <!-- /table -->
   </div>
-</div>
-</div>
+  </div>
+  </div>
+  <!-- /collapsible -->
+  </div>
+  </div>
+  </div>
 
 <div class="col-md-6 col-lg-3">
   <div class="card mb-3">
@@ -96,27 +156,88 @@ dog parks, kayacking, golf, public lawns and much more..all with a stunning view
 </div>
 <div class="card-body">
 <a href="https://parks.ny.gov/parks/montaukpoint/details.aspx" target="blank" class="card-link">Learn More</a>
+<!-- collapsible  -->
+    <div class="pt-3"><p>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#montauk" aria-expanded="false" aria-controls="collapseExample">
+Volunteer List
+</button>
+</p>
+<div class="collapse" id="montauk">
+<div class="card card-body">
+<!-- table -->
+          <table class="table table-striped table-sm table-bordered">
+            <thead>
+              <tr class="table-info">
+                <th scope="col"><center>Montauk Point Volunteers</center></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @vol_montauk.each do |volunteer| %>
+                <tr>
+                  <td scope="row"><center><%= volunteer.first_name %></center></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+<!-- /table -->
+
+</div>
+</div>
+</div>
+<!-- /collapsible -->
 </div>
 </div>
 </div>
 
-<div class="col-md-6 col-lg-3">
-  <div class="card mb-3">
-    <div class="img-max">
-<img src="/niagarafalls.PNG" class="card-img-top" alt="...">
-</div>
-<div class="card-body">
-  <h6 class="card-title text-muted font-italic">Western New York Region
-    <br>Niagara Falls, NY</h6>
-<p class="card-text">Niagara Falls State Park is the oldest state park in the United State. The park is home
-  to over 400 acres of lush landscape and wildlife, the beautiful falls themselves, and many attractions including interactive exhibits and miles of hiking trails.
-  Niagara Falls State Park offers a breathtaking view of one of nature’s marvels and an experience that will last a lifetime.</p>
-</div>
-<div class="card-body">
-<a href="https://www.niagarafallsstatepark.com/" target="blank" class="card-link">Learn More</a>
-</div>
-</div>
-</div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card mb-3">
+        <div class="img-max">
+    <img src="/niagarafalls.PNG" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h6 class="card-title text-muted font-italic">Western New York Region
+        <br>Niagara Falls, NY</h6>
+    <p class="card-text">Niagara Falls State Park is the oldest state park in the United State. The park is home
+      to over 400 acres of lush landscape and wildlife, the beautiful falls themselves, and many attractions including interactive exhibits and miles of hiking trails.
+      Niagara Falls State Park offers a breathtaking view of one of nature’s marvels and an experience that will last a lifetime.</p>
+    </div>
+    <div class="card-body">
+    <a href="https://www.niagarafallsstatepark.com/" target="blank" class="card-link">Learn More</a>
+    <!-- collaspsible -->
+    <div class="pt-3"><p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#niagara" aria-expanded="false" aria-controls="collapseExample">
+    Volunteer List
+    </button>
+    </p>
+    <div class="collapse" id="niagara">
+    <div class="card card-body">
+    <!-- table -->
+      <table class="table table-striped table-sm table-bordered">
+        <thead>
+          <tr class="table-info">
+            <th scope="col"><center>Niagara Falls Volunteers</center></th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <% @vol_niagara.each do |volunteer| %>
+            <tr>
+              <td scope="row"><center><%= volunteer.first_name %></center></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+<!-- /table -->
+
+</div>
+</div>
+</div>
+<!-- /collapsible -->
+</div>
+</div>
+</div>
   <!-- /container-->
 </div>

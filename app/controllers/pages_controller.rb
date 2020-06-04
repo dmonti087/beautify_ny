@@ -5,6 +5,10 @@ class PagesController < ApplicationController
   end
 
   def nysparks
+    @vol_bearmountain = Volunteer.where(park_id:2)
+    @vol_montauk = Volunteer.where(park_id:6)
+    @vol_niagara = Volunteer.where(park_id:4)
+    @vol_hudson = Volunteer.where(park_id:5)
   end
 
   def about

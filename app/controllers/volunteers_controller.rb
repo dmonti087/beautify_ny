@@ -55,7 +55,7 @@ end
 private
 
       def volunteer_params
-      params.require(:volunteer).permit(:park_id, :first_name, :last_name, :email, :hours, :days )
+      params.require(:volunteer).permit(:park_id, :first_name, :last_name, :email, :hours, :days, :notes )
       end
 
 
